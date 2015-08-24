@@ -11,7 +11,7 @@ CMD ["/sbin/my_init"]
 RUN apt-get update -q
 
 # Install plexWatch Dependencies
-RUN apt-get install -qy libwww-perl libxml-simple-perl libtime-duration-perl libtime-modules-perl libdbd-sqlite3-perl perl-doc libjson-perl libfile-readbackwards-perl
+RUN apt-get install -qy libwww-perl libxml-simple-perl libtime-duration-perl libtime-modules-perl libdbd-sqlite3-perl perl-doc libjson-perl libfile-readbackwards-perl php5 php5-common php5-cli
 
 # Add our crontab file
 ADD crons.conf /root/crons.conf
