@@ -23,13 +23,17 @@ RUN crontab /root/crons.conf
 RUN cron
 
 # Install plexWatchWeb Dependencies
-RUN apt-get install -qy apache2 libapache2-mod-php5 wget php5-sqlite php5-curl
+RUN apt-get install -qy apache2 libapache2-mod-php5 wget php5-sqlite php5-curl etherwake nmap
 
 # Enable PHP
 RUN a2enmod php5
 
 # Delete the annoying default index.html page
 RUN rm -f /var/www/html/index.html
+add index.php /var/www/html/index.php
+add wol.php /var/www/html/index.php
+add style.css /var/www/html/style.css
+add font-awesome.min.css /var/www/html/font-awesome.min.css
 
 # Update apache configuration with this one
 ADD apache-config.conf /etc/apache2/sites-available/000-default.conf
