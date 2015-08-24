@@ -31,7 +31,7 @@ RUN a2enmod php5
 # Delete the annoying default index.html page
 RUN rm -f /var/www/html/index.html
 ADD index.php /var/www/html/index.php
-ADD wol.php /var/www/html/index.php
+ADD wol.php /var/www/html/wol.php
 ADD style.css /var/www/html/style.css
 ADD font-awesome.min.css /var/www/html/font-awesome.min.css
 
