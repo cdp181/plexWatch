@@ -77,6 +77,9 @@ return array ("restatus" => $restatus, "rescss" => $rescss);
 <li><A HREF="http://192.168.0.150:32400/web/index.html#"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>Plex</A></h5></li>
 <?php $testarray = teststatus("192.168.0.150","8989")?>
 <li><A HREF="http://192.168.0.150:8989"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>nzbdrone</A></h5></li>
+<?php $testarray = teststatus("192.168.0.150","8080")?>
+<li><A HREF="http://192.168.0.150:8080/index.php"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>This Page</A></h5></li>
+<li><A HREF="http://192.168.0.150:8989/plexWatch/index.php"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>plexWatch</A></h5></li>
 <?php $testarray = teststatus("192.168.0.175","80")?>
 <li><A HREF="http://192.168.0.175"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>IPMI</A></h5></li>
 </ul>
@@ -93,15 +96,6 @@ return array ("restatus" => $restatus, "rescss" => $rescss);
 </ul>
 </div></div></div>
 
-<div class='row-fluid'><div class='span6'><div class='wellbg'><div class='wellheader'><div class='dashboard-wellheader'>
-<h3>USERVER2 @ unRAID2</h3></div></div>
-<div class='stats'>
-<ul>
-<?php $testarray = teststatus("192.168.0.5","80")?>
-<li><A HREF="http://192.168.0.5"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>This Page</A></h5></li>
-<li><A HREF="http://192.168.0.5/plexWatch/"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>PlexWatch</A></h5></li>
-</ul>
-</div></div></div>
 <div class='row-fluid'><div class='span12'><div class='wellbg'><div class='wellheader'><div class='dashboard-wellheader'>
 <h3>unRAID Test</h3></div><button type="button" class="btn btn-warning" onclick="loadXMLDoc('3c:d9:2b:02:0d:21')"><i class="icon-info-sign icon-white"></i></button><div id="dashboard-activity-button-info"></div></div>
 <div class='stats'>
