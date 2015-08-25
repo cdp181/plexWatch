@@ -1,5 +1,5 @@
 <?php
 $mac=htmlspecialchars($_GET["mac"]);
-$output = shell_exec("sudo -n /usr/sbin/etherwake " . $mac);
+$output = shell_exec("wakeonlan " . $mac);
 //echo "Sent!";
 ?>
