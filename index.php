@@ -79,7 +79,7 @@ return array ("restatus" => $restatus, "rescss" => $rescss);
 <li><A HREF="http://192.168.0.150:8989"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>nzbdrone</A></h5></li>
 <?php $testarray = teststatus("192.168.0.150","8080")?>
 <li><A HREF="http://192.168.0.150:8080/index.php"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>This Page</A></h5></li>
-<li><A HREF="http://192.168.0.150:8989/plexWatch/index.php"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>plexWatch</A></h5></li>
+<li><A HREF="http://192.168.0.150:8080/plexWatch/index.php"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>plexWatch</A></h5></li>
 <?php $testarray = teststatus("192.168.0.175","80")?>
 <li><A HREF="http://192.168.0.175"><div class='<?php echo $testarray["rescss"]?>'><h1><?php echo $testarray["restatus"]?></h1></div><h5>IPMI</A></h5></li>
 </ul>
