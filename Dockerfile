@@ -41,7 +41,20 @@ ADD ports.conf /etc/apache2/ports.conf
 
 # Install plexWatchWeb v1.5.4.2
 RUN mkdir -p /var/www/html/plexWatch
+RUN mkdir -p /var/www/html/font
+RUN mkdir -p /var/www/html/images
 RUN wget -P /tmp/ https://github.com/ecleese/plexWatchWeb/archive/v1.5.4.2.tar.gz
+RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/FontAwesome.otf
+RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/fontawesome-webfont.eot
+RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/fontawesome-webfont.svg
+RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/fontawesome-webfont.ttf
+RUN wget -P /var/www/html/font/ http://www.smokingcures.com/git/font/fontawesome-webfont.woff
+RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/background.png
+RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/glyphicons.png
+RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/glyphicons-halflings.png
+RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/glyphicons-halflings-white.png
+RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/gravatar-default-80x80.png
+RUN wget -P /var/www/html/images/ http://www.smokingcures.com/git/images/icon_ipad.png
 RUN tar -C /var/www/html/plexWatch -xvf /tmp/v1.5.4.2.tar.gz --strip-components 1
 RUN chown -R www-data:www-data /var/www/html/plexWatch
 
